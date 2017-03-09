@@ -11,7 +11,7 @@
     <title>Создать пользователя</title>
 </head>
 <body>
-<form action="/add" method="post">
+<form action="<%=request.getContextPath()%>/add" method="post">
     Имя: <input type="text" name="name"/> <br>
     Возраст: <input type="number" min="1" max="100" name="age"/> <br>
     Админ: <input type="checkbox" name="admin"><br>

@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<form method="get" action="/">
+<form method="get" action="<%=request.getContextPath()%>/">
     <input type="text" name="name" value="${name}" placeholder="Введите имя...">
     <button type="submit">Поиск</button>
     <a href="/">Сброс</a>
@@ -22,7 +22,7 @@
             <td>${user.age}</td>
             <td>${user.admin}</td>
             <td>${user.createDate.toGMTString()}</td>
-            <td><a href="/edit/${user.id}">Редактировать</a> | <a href="/delete/${user.id}">Удалить</a></td>
+            <td><a href="<%=request.getContextPath()%>/edit/${user.id}">Редактировать</a> | <a href="<%=request.getContextPath()%>/delete/${user.id}">Удалить</a></td>
         </tr>
 
     </c:forEach>
@@ -31,7 +31,7 @@
 
 <c:if test="${pageCnt > 0}">
 <p>
-    <a href="/<c:if test="${name != null}">?name=${name}</c:if>">
+    <a href="<%=request.getContextPath()%>/<c:if test="${name != null}">?name=${name}</c:if>">
         <c:choose>
             <c:when test="${page == 0}">
             <b>1</b>
@@ -59,4 +59,4 @@
 </p>
 </c:if>
 
-<a href="/add">Создать</a>
+<a href="<%=request.getContextPath()%>/add">Создать</a>
