@@ -20,6 +20,7 @@
     <resources mapping="/resources/**" location="resources" />
     <context:component-scan base-package="ru.dekrement.*" />
 
+    <!-- -->
     <beans:bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/views/" />
