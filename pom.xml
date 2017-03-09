@@ -169,7 +169,7 @@
                 <webXml>src/main/web/WEB-INF/web.xml</webXml>
                 <webResources>
                     <resource>
-                        <directory>resources</directory>
+                        <directory>src/main/web/WEB-INF/resources</directory>
                         <!-- override the destination directory for this resource -->
                         <targetPath>WEB-INF</targetPath>
                         <!-- enable filtering -->
