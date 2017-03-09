@@ -167,6 +167,15 @@
             <artifactId>maven-war-plugin</artifactId>
             <configuration>
                 <webXml>src/main/web/WEB-INF/web.xml</webXml>
+                <webResources>
+                    <resource>
+                        <directory>resources</directory>
+                        <!-- override the destination directory for this resource -->
+                        <targetPath>WEB-INF</targetPath>
+                        <!-- enable filtering -->
+                        <filtering>true</filtering>
+                    </resource>
+                </webResources>
             </configuration>
             <version>3.0.0</version>
         </plugin>
