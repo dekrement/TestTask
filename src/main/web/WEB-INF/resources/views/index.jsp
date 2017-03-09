@@ -5,7 +5,7 @@
 <form method="get" action="<%=request.getContextPath()%>/">
     <input type="text" name="name" value="${requestScope.name}" placeholder="Введите имя...">
     <button type="submit">Поиск</button>
-    <a href="/">Сброс</a>
+    <a href="<%=request.getContextPath()%>/">Сброс</a>
 </form>
 <table>
     <thead>
