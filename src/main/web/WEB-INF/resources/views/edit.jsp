@@ -12,7 +12,7 @@
     <title>Редактирование</title>
 </head>
 <body>
-<form action="<%=request.getContextPath()%> /edit" method="post">
+<form action="<%=request.getContextPath()%>/edit" method="post">
     <input type="hidden" name="id" value="${user.id}">
     Имя: <input type="text" value="${user.name}" name="name"/> <br>
     Возраст: <input type="number" min="1" max="100" value="${user.age}" name="age"> <br>
