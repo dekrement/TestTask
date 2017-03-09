@@ -3,7 +3,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <form method="get" action="<%=request.getContextPath()%>/">
-    <input type="text" name="name" value="${name}" placeholder="Введите имя...">
+    <input type="text" name="name" value="${requestScope.name}" placeholder="Введите имя...">
     <button type="submit">Поиск</button>
     <a href="/">Сброс</a>
 </form>
@@ -16,7 +16,7 @@
     <th>Действия</th>
     </thead>
     <tbody>
-    <c:forEach items="${users}" var="user">
+    <c:forEach items="${requestScope.users}" var="user">
         <tr>
             <td>${user.name}</td>
             <td>${user.age}</td>
