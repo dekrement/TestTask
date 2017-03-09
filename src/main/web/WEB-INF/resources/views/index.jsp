@@ -16,13 +16,13 @@
     <th>Действия</th>
     </thead>
     <tbody>
-    <c:forEach items="${requestScope.users}" var="user">
+    <c:forEach items="${requestScope.users}" var="myUser">
         <tr>
-            <td>${user.name}</td>
-            <td>${user.age}</td>
-            <td>${user.admin}</td>
-            <td>${user.createDate.toGMTString()}</td>
-            <td><a href="<%=request.getContextPath()%>/edit/${user.id}">Редактировать</a> | <a href="<%=request.getContextPath()%>/delete/${user.id}">Удалить</a></td>
+            <td>${myUser.name}</td>
+            <td>${myUser.age}</td>
+            <td>${myUser.admin}</td>
+            <td>${myUser.createDate.toGMTString()}</td>
+            <td><a href="<%=request.getContextPath()%>/edit/${myUser.id}">Редактировать</a> | <a href="<%=request.getContextPath()%>/delete/${myUser.id}">Удалить</a></td>
         </tr>
 
     </c:forEach>
